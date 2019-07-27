@@ -20,9 +20,15 @@ def merge(left, right, n):
 
   for i in range(n):
     if iLeft >= leftLength:
+      '''
+      All the items in the left array have been copied over
+      '''
       merged.append(right[iRight])
       iRight += 1
     elif iRight >= rightLength:
+      '''
+      All the items in the right array have been copied over
+      '''
       merged.append(left[iLeft])
       iLeft += 1
     elif left[iLeft] <= right[iRight]:
@@ -65,10 +71,16 @@ def mergeInversion(left, right, n):
 
   for i in range(n):
     if iLeft >= leftLength:
+      '''
+      All the items in the left array have been copied over
+      '''
       inversions += (mid - iLeft)
       # OR => inversions += (len(left[iLeft:]))
       iRight += 1
     elif iRight >= rightLength:
+      '''
+      All the items in the right array have been copied over
+      '''
       iLeft += 1
     elif left[iLeft] <= right[iRight]:
       iLeft += 1
